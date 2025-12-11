@@ -13,7 +13,7 @@ import SignupPage from './pages/SignupPage';
 import { AuthProvider } from './contexts/AuthContext';
 import { Toaster } from "@/components/ui/sonner";
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <BrowserRouter>
         <AuthProvider>

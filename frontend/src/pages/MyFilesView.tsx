@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Badge } from "@/components/ui/badge";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetFooter, SheetClose } from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetHeader, SheetTitle } from "@/components/ui/sheet";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { 
@@ -514,7 +514,7 @@ function MyFilesView() {
                             <Button variant="outline" size="lg" className="w-full bg-white dark:bg-slate-900" onClick={() => handleDownload(selectedFile)}>
                                 <Download className="w-4 h-4 mr-2" /> Download
                             </Button>
-                            <Button variant="outline" size="lg" className="w-full border-red-200 text-red-600 hover:bg-red-50 dark:border-red-900/30 dark:bg-slate-900 dark:text-red-400" onClick={() => handleDelete(selectedFile.id)}>
+                            <Button variant="outline" size="lg" className="w-full border-red-200 text-red-600 hover:bg-red-50 dark:border-red-900/30 dark:bg-slate-900 dark:text-red-400" onClick={() => confirmDelete(selectedFile.id)}>
                                 <Trash2 className="w-4 h-4 mr-2" /> Delete
                             </Button>
                         </div>
@@ -534,14 +534,14 @@ function MyFilesView() {
           {!generatedLink ? (
             <div className="grid gap-4 py-4">
               <div className="grid grid-cols-4 items-center gap-4">
-                <Label htmlFor="password" class="text-right">Password</Label>
+                <Label htmlFor="password" className="text-right">Password</Label>
                 <Input
                   id="password" type="password" placeholder="(Optional)" className="col-span-3"
                   value={sharePassword} onChange={(e) => setSharePassword(e.target.value)}
                 />
               </div>
               <div className="grid grid-cols-4 items-center gap-4">
-                <Label htmlFor="days" class="text-right">Expires In</Label>
+                <Label htmlFor="days" className="text-right">Expires In</Label>
                 <Input
                   id="days" type="number" placeholder="Days (Optional)" className="col-span-3"
                   value={shareDays} onChange={(e) => setShareDays(e.target.value)}

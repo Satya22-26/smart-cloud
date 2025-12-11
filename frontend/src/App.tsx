@@ -1,5 +1,4 @@
 import Sidebar from "./components/Sidebar";
-import MyFilesView from "./pages/MyFilesView";
 import UploadView from "./pages/UploadView";
 
 function App() {
